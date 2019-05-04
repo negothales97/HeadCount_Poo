@@ -1,0 +1,32 @@
+package view;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+public class CompanyWindow {
+
+	public static void main(String[] args) {
+		//Criando botões
+		JButton btnOk 		= new JButton("OK");
+		JButton btnSair 	= new JButton("Sair");
+		
+		//Criando Tela
+		JPanel panel 		= new JPanel();
+		panel.add(btnOk);
+		panel.add(btnSair);
+		
+		//Confgigurando Janela
+		JFrame janela = new JFrame("Cadastrar Empresa");
+		janela.add(panel);
+		//Quando a janela for fechada, a aplicação será parada
+		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//Organiza componentes
+		janela.pack();
+		//Mostra a janela
+		janela.setVisible(true);
+		
+	}
+
+}

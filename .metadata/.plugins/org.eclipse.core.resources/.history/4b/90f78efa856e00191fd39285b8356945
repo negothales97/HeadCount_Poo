@@ -1,0 +1,87 @@
+package view;
+
+import javax.swing.Box;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class Branch {
+
+	public static void main(String[] args) {
+		// Criando componentes
+		JButton btnOk 					= new JButton("OK");
+		JButton btnSair 				= new JButton("Sair");
+		
+		JComboBox selectCompany 		= new JComboBox();
+		selectCompany.addItem("--Escolha um Item--");
+		selectCompany.addItem("HeadCount");
+		
+		JLabel labelName 				= new JLabel("Nome Fantasia");
+		JTextField inputName 			= new JTextField(5);
+
+		JLabel labelTrade 				= new JLabel("Razão Social");
+		JTextField inputTrade 			= new JTextField(5);
+		
+		JLabel labelEmail 				= new JLabel("E-mail");
+		JTextField inputEmail 			= new JTextField(5);
+
+		JLabel labelCNPJ				= new JLabel("CNPJ");
+		JTextField inputCNPJ			= new JTextField(5);
+		
+		JLabel labelStateIns 			= new JLabel("Inscrição Estadual");
+		JTextField inputStateIns 		= new JTextField(5);
+		
+		JLabel labelMunicipalIns 		= new JLabel("Inscrição Municipal");
+		JTextField inputMunicipalIns 	= new JTextField(5);
+		
+		JLabel labelPhone1 				= new JLabel("Telefone 1");
+		JTextField inputPhone1 			= new JTextField(5);
+		
+		JLabel labelPhone2 				= new JLabel("Telefone 2");
+		JTextField inputPhone2 			= new JTextField(5);
+		
+		// Criando Tela
+		JPanel panel = new JPanel();
+		Box vBox = Box.createVerticalBox();
+		vBox.add(labelName);
+		vBox.add(inputName);
+		vBox.add(labelTrade);
+		vBox.add(inputTrade);
+		vBox.add(labelEmail);
+		vBox.add(inputEmail);
+		vBox.add(labelCNPJ);
+		vBox.add(inputCNPJ);
+		vBox.add(labelStateIns);
+		vBox.add(inputStateIns);
+		vBox.add(labelMunicipalIns);
+		vBox.add(inputMunicipalIns);
+		vBox.add(labelPhone1);
+		vBox.add(inputPhone1);
+		vBox.add(labelPhone2);
+		vBox.add(inputPhone2);
+		vBox.add(btnOk);
+		vBox.add(btnSair);
+		
+		panel.add(vBox);
+		panel.add(selectCompany);
+		
+		
+
+		
+		
+
+		// Confgigurando Janela
+		JFrame janela = new JFrame("Cadastrar Filial");
+		janela.add(panel);
+		// Quando a janela for fechada, a aplicação será parada
+		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		// Organiza componentes
+		janela.setSize(400, 250);
+		// Mostra a janela
+		janela.setVisible(true);
+	}
+
+}

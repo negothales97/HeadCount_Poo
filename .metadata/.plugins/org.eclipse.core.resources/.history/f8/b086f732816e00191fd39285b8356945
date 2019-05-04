@@ -1,0 +1,55 @@
+package view;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class Branch {
+
+	public static void main(String[] args) {
+		// Criando componentes
+		JButton btnOk 					= new JButton("OK");
+		JButton btnSair 				= new JButton("Sair");
+		
+		JLabel labelName 				= new JLabel("Nome Fantasia");
+		JTextField inputName 			= new JTextField(5);
+
+		JLabel labelTrade 				= new JLabel("Razão Social");
+		JTextField inputTrade 			= new JTextField(5);
+
+		JLabel labelCNPJ				= new JLabel("CNPJ");
+		JTextField inputCNPJ			= new JTextField(5);
+		
+		JLabel labelStateIns 			= new JLabel("Inscrição Estadual");
+		JTextField inputStateIns 		= new JTextField(5);
+		
+		JLabel labelMunicipalIns 		= new JLabel("Inscrição Municipal");
+		JTextField inputMunicipalIns 	= new JTextField(5);
+		
+		JLabel labelPhone1 		= new JLabel("Telefone 1");
+		JTextField inputPhone1 	= new JTextField(5);
+		
+		JLabel labelPhone2 		= new JLabel("Telefone 2");
+		JTextField inputPhone2 	= new JTextField(5);
+		
+		// Criando Tela
+		JPanel panel = new JPanel();
+		panel.add(labelName);
+		panel.add(inputName);
+		panel.add(btnOk);
+		panel.add(btnSair);
+
+		// Confgigurando Janela
+		JFrame janela = new JFrame("Cadastrar Empresa");
+		janela.add(panel);
+		// Quando a janela for fechada, a aplicação será parada
+		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		// Organiza componentes
+		janela.pack();
+		// Mostra a janela
+		janela.setVisible(true);
+	}
+
+}
